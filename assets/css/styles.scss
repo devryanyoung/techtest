@@ -1,0 +1,177 @@
+
+
+//required color
+
+$header-color: #F6F6F7;
+
+$primary: #222222;
+$secondary: #888888;
+$tertiary: #CCCCCC;
+$star: #C90000;
+
+
+.main {
+    width: 1440px;
+    margin: auto;
+    padding: auto;
+    padding-top: 15px;
+    .header {
+        background-color: $header-color;
+        height: 30px;
+        .container  {
+            width: 1140px;
+            margin: auto;
+            padding: auto;
+            a {
+                &#mycart {
+                    float:right;
+                    font-size: 11px;
+                    padding: 5px 0;
+                    line-height:20px;
+                    font-weight:  600;
+                }
+            }
+            #cartItem {
+                position:absolute;
+                right: 400px;
+                top: 45px;
+                background-color: #fff;
+                border: 1px solid black;
+                width: 300px;
+                .items {
+                    padding: 20px;
+                    h2 {
+                        font-size: 15px;
+                    }
+                    p {
+                        font-size: 12px;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .products {
+        padding-top: 36px;
+        .container {
+            width: 1140px;
+            margin: auto;
+            padding-left: 50px;
+            .row {
+                .col {
+                    width: 100%;
+                    padding: 0 !important;
+                    .product-title {
+                        font-size: 20px;
+                        color: $primary;
+                    }
+                    .product-image {
+                        height: 600px;
+                    }
+                    p {
+                        &.pricing-border {
+                            border-top: .5px solid $header-color;
+                            border-bottom: .5px solid $header-color;
+                            margin: 15px 0;
+                        }
+                        span {
+                            &.product-cost {
+                                font-size: 15px;
+                                font-weight: 700;
+                            }
+                        }
+
+                        &.product-description {
+                            color: $secondary;
+                            min-height: 150px;
+                        }
+                        &.product-sizing {
+                            text-transform: uppercase;
+                            font-size: 15px;
+                            color: $secondary;
+                            span {
+                                &.important {
+                                    color:$star;
+                                }
+                                &#size {
+                                    font-weight: 700;
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                    .product-button {
+                        button {
+                            font-size: 10px;
+                            line-height: 12px;
+                            padding: 15px;
+                            background-color: $header-color;
+                            border: 1px solid $secondary;
+                            color: $secondary;
+                            &:hover {
+                                border-color: $primary;
+                                color: $primary;
+                            }
+                            &.active {
+                                border-color: $primary;
+                                color: $primary;
+                            }
+                        }
+                    }
+
+                    .addtocart {
+                        button {
+                            background-color: $header-color;
+                            border: 1px solid $secondary;
+                            color: $secondary;
+                            text-transform: uppercase;
+                            padding: 5px 30px;
+                            &:hover {
+                                border-color: $primary;
+                                color: $tertiary;
+                                background-color: $primary;
+                            }
+                            &.active {
+                                border-color: $primary;
+                                background-color: $primary;
+                                color: $tertiary;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .main{
+        width: 100%;
+        .header {
+            .container {
+                width: 100%;
+            }
+        }
+        .products {
+            padding: 20px 30px;
+            .container {
+                width: 100%;
+                padding: 0;
+                .row {
+                    .col {
+                        .product-title {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,3 +1,5 @@
+
+//add to cart
 function addToCart() {
     const btn1 = document.querySelector('#sizing1');
     const btn2 = document.querySelector('#sizing2');
@@ -16,7 +18,7 @@ function addToCart() {
 
 }
 
-
+//toggle class
 $(document).ready(function(){
     $('#cartItem').hide();
     $('#sizing1').click(function(){
@@ -51,6 +53,4 @@ $(document).ready(function(){
         .mouseleave(function() {
             $('#cartItem').hide();
         })
-
-    
 });
